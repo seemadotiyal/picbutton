@@ -1,0 +1,36 @@
+class Employe extends React.Component{
+ constructor(props) {
+    super(props);
+    this.state = {
+      users: [{ id: 1, name: 'seema' }, { id: 2, name: 'ravi' }]
+    };
+}
+
+del(id){
+
+this.setState((pre)=>{return {users:pre.users.filter(user=>user.id!==id)}})
+
+
+}
+
+
+
+
+render(){
+return (
+
+<div>
+<h1> USERS</h1>
+<ul>
+{this.state.users.map(user=>{ return (
+<li key={user.id} >
+<input type="button" value="delete"  onClick={()=>this.del(user.id)}/>
+{user.name}</li>)
+})
+}
+</ul>
+</div>
+);
+}
+}
+ReactDOM.render(<Employe/>,mountNode);
