@@ -1,0 +1,12 @@
+const Card=(props)=>
+{
+return(
+<div>
+<img src="https://avatars0.githubusercontent.com/u/2?v=4"
+/>
+<div >
+name</div>
+</div>
+);
+};
+ReactDOM.render(<Card/>,mountNode);
