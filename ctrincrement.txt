@@ -1,0 +1,26 @@
+class Button extends React.Component{
+
+state={ctr:0};
+
+
+
+handle=()=>{
+this.setState({
+ctr:this.state.ctr+1
+});
+
+}
+
+
+render(){
+return(
+
+<button   onClick={this.handle}> {this.state.ctr}</button>);
+
+}
+
+
+}
+
+
+ReactDOM.render(<Button/>,mountNode);
