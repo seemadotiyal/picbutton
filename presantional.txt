@@ -1,0 +1,32 @@
+const Card=(props)=>
+{
+return(
+<div>
+<button> <img width="75" src= {props.url}/></button>
+<div>
+name: {props.name}
+</div>
+</div>
+);
+};
+
+let data=[{name:"abc",
+url:"https://avatars0.githubusercontent.com/u/1?v=4"
+},
+{
+name:"xyz",
+url:"https://avatars0.githubusercontent.com/u/2?v=4"
+}
+];
+
+
+const CardHolder=(props)=>
+{
+return(
+<div>
+{props.pass.map(item=><Card {...item}/>)}
+</div>
+);
+};
+
+ReactDOM.render(<CardHolder  pass={data}/>,mountNode);
